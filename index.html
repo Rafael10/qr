@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Contacto</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- QR LIB -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- FORMULARIO -->
+  <div class="card form-card">
+    <div class="icon">👤</div>
+    <h2>Formulario</h2>
+    <p class="subtitle">Completa los datos para generar tu código QR</p>
+
+    <form id="contactForm">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="text" id="telefono" placeholder="Teléfono" required>
+      <input type="email" id="email" placeholder="Correo electrónico">
+      <button type="submit">Generar QR</button>
+    </form>
+  </div>
+
+  <!-- RESULTADO -->
+  <div class="card result-card" id="resultCard">
+    <h3>✔ QR generado con éxito</h3>
+    <p>Escanea el QR para guardar el contacto</p>
+
+    <div class="qr-box">
+      <div id="qrcode"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TU JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
